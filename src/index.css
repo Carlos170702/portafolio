@@ -1,3 +1,9 @@
+:root {
+  --fuent-principas: 'Amatic SC', cursive;
+  --fuent-secundary: 'Inconsolata', monospace;
+  --fuent-three: 'Josefin Sans', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +12,7 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/000/190/741/original/ultra-violet-galactic-background-free-vector.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.App{
+  background-color: black;
 }
 
 .conteiner {
@@ -21,14 +20,19 @@ body {
   margin: 0 auto;
 }
 
-.pagina{
-  height: 100vh;
+.pagina {
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/190/741/original/ultra-violet-galactic-background-free-vector.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
 /* Nav*/
 
 .nav {
@@ -39,7 +43,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation: alternate move 1s ease infinite ;
+  animation: alternate move 1s ease infinite;
 }
 
 .nav__img {
@@ -56,34 +60,157 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav__link {
   color: white;
-  font-family: 'Inconsolata', monospace;
+  font-family: var(--fuent-secundary);
   font-weight: bold;
   text-decoration: none;
 }
 
 @keyframes move {
-  to{
+  to {
     transform: translateY(5px);
   }
 }
 
 /* header */
-.header{
+.header {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 100vh;
+}
+
+.header__info {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header__Welcome {
+  width: 200px;
+  color: white;
+  border: 1px solid white;
+  padding: .5rem;
+  background: linear-gradient(90deg, rgba(90, 51, 116, 0.8504273504273504) 0%, rgba(72, 90, 182, 0.9017094017094017) 100%);
+  box-shadow: 0px 0px 3px white;
+  font-family: var(--fuent-principas);
+  word-spacing: .2rem;
+  font-size: 20px;
+}
+
+
+.header__titulo {
+  color: white;
+  font-family: var(--fuent-three);
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.header__about {
+  font-family: 'Anek Telugu', sans-serif;
+  font-weight: 500;
+}
+
+.herader__pefil {
+  width: 400px;
+  height: 400px;
+  border-radius: 40%;
+  position: relative;
+}
+
+.header__img {
+  background-image: url("https://www.elsoldemexico.com.mx/doble-via/xoiaw8-cuales-son-las-razas-de-gato-mas-grandes-del-mundo.jpg/ALTERNATES/LANDSCAPE_768/%C2%BFCua%CC%81les%20son%20las%20razas%20de%20gato%20ma%CC%81s%20grandes%20del%20mundo.jpg");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.header__iconos {
+  color: white;
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.header__btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--fuent-secundary);
+}
+
+/* Skills */
+
+.skills {
+  background-color: black;
+  padding: 10px 80px;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.skills__titulo {
+  margin: 20px 0;
+  font-size: 30px;
+  font-family: var(--fuent-secundary);
+}
+
+.skills__info{
+  letter-spacing: 1px;
+  color: #888888;
+  font-size: 15px;
+  font-family: 'Anek Telugu', sans-serif;
+}
+
+.Skills__skill{
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.skills__fondo{
+  position: relative;
+  background: linear-gradient(90deg, rgba(66,26,89,0.9192051820728291) 32%, rgba(159,72,182,0.8015581232492998) 100%);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.herader__pefil{
-  width: 40%;
-  height: 40%;
+
+.skills__contentPercentage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: black;
+  width: 80PX;
+  height: 80PX;
+  border-radius: 50%;
 }
 
-.header__img{
-  width: 100% ;
-  height: 400px;
+.skills__contentPercentage::after{
+  background: linear-gradient(90deg, rgba(66,26,89,0.9192051820728291) 32%, rgba(159,72,182,0.8015581232492998) 100%);
+  content: '';
+  top: 0%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
 }
