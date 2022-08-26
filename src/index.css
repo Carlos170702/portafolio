@@ -38,7 +38,7 @@ body {
 /* Nav*/
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 0%;
   left: 0%;
@@ -46,6 +46,7 @@ body {
   justify-content: space-between;
   align-items: center;
   animation: alternate move 1s ease infinite;
+  z-index: 9999;
 }
 
 .nav__img {
@@ -92,6 +93,7 @@ body {
   gap: 1rem;
   flex-direction: column;
   flex: 1;
+  height: 400px;
 }
 
 .header__Welcome {
@@ -165,6 +167,10 @@ body {
   color: white;
   border-radius: 20px;
   text-align: center;
+  margin-top: -100px;
+  position: absolute;
+  right: 0%;
+  left: 0%;
 }
 
 .skills__titulo {
@@ -230,20 +236,19 @@ body {
 }
 
 /* Projects */
-.Projects{
+.Projects {
   text-align: center;
-  margin: 5rem auto;
-
+  margin: 400px auto 0 auto;
 }
 
-.proyects__titulo{
+.proyects__titulo {
   color: white;
   font-family: var(--fuent-secundary);
   margin-bottom: 1rem;
   font-size: 2rem;
 }
 
-.proyects__info{
+.proyects__info {
   color: #888888;
   font-family: var(--fuent-three);
   word-spacing: 2px;
@@ -251,27 +256,31 @@ body {
   margin-bottom: 2rem;
 }
 
-.proyects__tabs{
+.proyects__tabs {
   display: flex;
   justify-content: space-around;
   border: 1px solid white;
-  width: 20%;
+  width: 50%;
   margin: 0px auto;
   position: relative;
   border-radius: 20px;
+  gap: 5px;
+  background-color: blueviolet;
 }
 
-.proyects__btnTabs{
+.proyects__btnTabs {
+  cursor: pointer;
   border: none;
   background-color: transparent;
-  background-color: blueviolet;
   width: 100%;
   height: 100%;
-  padding: 1rem;
-  
+  padding: .5rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: var(--fuent-three);
 }
 
-.projects__contentImg{
+.projects__contentImg {
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -280,12 +289,36 @@ body {
   gap: 1rem;
 }
 
-.img{
+.projects__img {
   width: 30%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly ;
 }
 
-.imgas{
-  height: 300px;
+.projects__name {
+  color: white;
+}
+
+.projects__imgas {
   width: 100%;
+  height: 80%;
   border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px white;
+}
+
+@media (max-width: 850px) {
+
+  .herader__pefil{
+    width: 300px;
+    height: 300px;
+  }
+  .projects__img{
+    width: 40%;
+  }
+
+  .projects__contentImg{
+    justify-content: space-evenly;
+  }
 }

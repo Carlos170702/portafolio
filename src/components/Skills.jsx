@@ -3,7 +3,7 @@ import { FiArrowRightCircle, FiArrowLeftCircle } from 'react-icons/fi'
 export const Skills = ({ skills }) => {
     return (
         <>
-            <div className="conteiner skills">
+            <div className="conteiner skills" id="skills">
                 <h2 className="skills__titulo">Skills</h2>
                 <p className="skills__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ducimus expedita tempore deleniti vitae, at esse? Beatae veniam sapiente sequi?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ducimus expedita tempore deleniti vitae, at esse? Beatae veniam sapiente sequi?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ducimus expedita tempore deleniti vitae, at esse? Beatae veniam sapiente sequi?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ducimus expedita tempore deleniti vitae, at esse? </p>
                 <div className="skills__contentSkills">

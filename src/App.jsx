@@ -6,9 +6,10 @@ import { Skills } from './components/Skills'
 function App() {
 
   const links = [
-    { id: 1, url: "/Home", name: "Home" },
-    { id: 2, url: "/skills", name: "Skills" },
-    { id: 3, url: "/contact", name: "Contact" },
+    { id: 1, url: "#home", name: "Home" },
+    { id: 2, url: "#skills", name: "Skills" },
+    { id: 3, url: "#projects", name: "Projects" },
+    { id: 4, url: "#contact", name: "Contact" },
   ]
 
   const skills = [
@@ -33,7 +34,7 @@ function App() {
     },
     {
       id: 5, name: 'proyect 5', url: "https://firebasestorage.googleapis.com/v0/b/portafolio-c6563.appspot.com/o/img5.jpg?alt=media&token=8b6bd1d8-17d5-432b-ae17-919e3899b29a"
-    },
+    },  
     {
       id: 6, name: 'proyect 6', url: "https://firebasestorage.googleapis.com/v0/b/portafolio-c6563.appspot.com/o/img6.webp?alt=media&token=e01ebfdf-4925-489b-a6a4-6b3499f16f44"
     },
@@ -42,12 +43,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="pagina">
+      <div className="pagina" id="home">
         <NavBar links={links} />
         <Header />
-        <Skills skills={skills} />
       </div>
-        <Projects proyects={proyects} />
+        <Skills skills={skills} />
+      <Projects proyects={proyects} />
     </div>
   )
 }
