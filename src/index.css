@@ -22,7 +22,6 @@ body {
 
 .pagina {
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,21 +31,19 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 1rem 0px;
+  margin-bottom: 5px;
+  height: max-content;
 }
 
 /* Nav*/
 
 .nav {
-  position: fixed;
-  top: 10px;
-  right: 0%;
-  left: 0%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   animation: alternate move 1s ease infinite;
   z-index: 9999;
+  margin-top: 5px;
 }
 
 .nav__img {
@@ -85,7 +82,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
-  height: 100vh;
+  margin-bottom: 120px;
 }
 
 .header__info {
@@ -93,7 +90,6 @@ body {
   gap: 1rem;
   flex-direction: column;
   flex: 1;
-  height: 400px;
 }
 
 .header__Welcome {
@@ -123,19 +119,40 @@ body {
 }
 
 .herader__pefil {
-  width: 400px;
+  width: 300px;
   height: 400px;
-  border-radius: 40%s;
   position: relative;
 }
 
-.header__img {
-  background-image: url("https://www.elsoldemexico.com.mx/doble-via/xoiaw8-cuales-son-las-razas-de-gato-mas-grandes-del-mundo.jpg/ALTERNATES/LANDSCAPE_768/%C2%BFCua%CC%81les%20son%20las%20razas%20de%20gato%20ma%CC%81s%20grandes%20del%20mundo.jpg");
-  background-position: center;
+.header__card {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  position: absolute;
+  border-radius: 15px;
+  background: linear-gradient(#2196f3, #2193f3 30%, #1d3548 30%, #1d3548);
+  overflow: hidden;
+  position: relative;
+}
+
+.header__imgBx{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 10;
+  transform-origin: top;
+}
+.header__card:hover .header__imgBx{
+  margin-top: 10px;
+  transform: scale(.5);
+}
+
+.header__imgBx img{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header__iconos {
@@ -159,6 +176,13 @@ body {
   font-family: var(--fuent-secundary);
 }
 
+
+@media (min-width: 850px) {
+  .header{
+    margin: 0;
+    height: 100vh;
+  }
+}
 /* Skills */
 
 .skills {
@@ -168,9 +192,7 @@ body {
   border-radius: 20px;
   text-align: center;
   margin-top: -100px;
-  position: absolute;
-  right: 0%;
-  left: 0%;
+  z-index: 5;
 }
 
 .skills__titulo {
@@ -309,11 +331,6 @@ body {
 }
 
 @media (max-width: 850px) {
-
-  .herader__pefil{
-    width: 300px;
-    height: 300px;
-  }
   .projects__img{
     width: 40%;
   }
