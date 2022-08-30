@@ -34,7 +34,7 @@ function App() {
     },
     {
       id: 5, name: 'proyect 5', url: "https://firebasestorage.googleapis.com/v0/b/portafolio-c6563.appspot.com/o/img5.jpg?alt=media&token=8b6bd1d8-17d5-432b-ae17-919e3899b29a"
-    },  
+    },
     {
       id: 6, name: 'proyect 6', url: "https://firebasestorage.googleapis.com/v0/b/portafolio-c6563.appspot.com/o/img6.webp?alt=media&token=e01ebfdf-4925-489b-a6a4-6b3499f16f44"
     },
@@ -46,8 +46,17 @@ function App() {
       <div className="pagina" id="home">
         <NavBar links={links} />
         <Header />
+        {
+          skills.map(item => (
+            <div
+              key={item.id}
+              className="pagina__burbuja"
+              style={{ width: `5${+Math.random() * 100}px`, left: `${Math.random() * 100}rem`} }
+            ></div>
+          ))
+        }
       </div>
-        <Skills skills={skills} />
+      <Skills skills={skills} />
       <Projects proyects={proyects} />
     </div>
   )
