@@ -27,7 +27,8 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  background: linear-gradient(90deg, #6e25f5 0%, rgb(64, 61, 231) 100%);
+  background: linear-gradient(90deg, rgba(23,89,145,1) 0%, rgba(1,1,153,1) 100%, rgba(14,17,161,1) 100%);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -35,14 +36,17 @@ body {
 }
 
 .pagina__burbuja{
-  width: 80px;
-  height: 80px;
   background-color: rgba(255, 255, 255, .5);
   filter: blur(1px);
   position: absolute;
   bottom: 0;
   border-radius: 50%;
   animation: borbuja 3s linear infinite;
+}
+
+.borbuja{
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes borbuja {
@@ -140,6 +144,8 @@ body {
   font-family: 'Anek Telugu', sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
+  font-size: 15px;
+  color: white;
 }
 
 .herader__pefil {
@@ -273,6 +279,7 @@ body {
   text-align: center;
   margin-top: -100px;
   z-index: 5;
+  box-shadow: 0px 0px 2px -1px white;
 }
 
 .skills__titulo {
@@ -340,7 +347,7 @@ body {
 /* Projects */
 .Projects {
   text-align: center;
-  margin: 50px auto 0 auto;
+  margin: 80px auto 0 auto;
 }
 
 .proyects__titulo {
@@ -418,5 +425,23 @@ body {
   .projects__contentImg{
     justify-content: space-evenly;
   }
+
+  .header{
+    flex-direction: column-reverse;
+  }
+
+  .header__btn{
+    padding: 0;
+  }
   
+}
+
+@media (max-width: 750px) {
+    .skills{
+      padding: 20px 20px;
+    }
+
+    .projects__img{
+      width: 100%;
+    }
 }
