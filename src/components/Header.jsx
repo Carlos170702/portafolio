@@ -9,7 +9,7 @@ export const Header = () => {
                 <div className="header__info">
                     <h2 className="header__Welcome">Let's go to my portafolio</h2>
                     <h1 className="header__titulo">Hi! I'm carlos Web Design </h1>
-                    <p className="header__about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequuntur doloribus aut, vero quidem eos labore, esse repudiandae sunt hic dolorum ut reprehenderit voluptates nulla facere reiciendis pariatur amet eum eaque necessitatibus perspiciatis. Adipisci deserunt iure ad, eaque molestias consectetur facere vero, reiciendis veniam ab sit! Sequi repellendus, officiis obcaecati quas beatae dolore mollitia,</p>
+                    <p className="header__about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequuntur doloribus aut, vero quidem eos labore, esse repudiandae sunt hic dolorum ut reprehenderit voluptates nulla facere reiciendis pariatur amet eum eaque necessitatibus perspiciatis. Adipisci deserunt iure ad, eaque molestias consectetur facere vero, reiciendis veniam ab sit! Sequi repellendus, officiis obcaecati quas beatae dolore mollitia, Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis officiis porro, aliquid sint tempora, voluptate doloribus sed non aperiam, nesciunt nemo. Aliquid quam delectus tempora veritatis ipsam dolor animi quisquam tempore odio ratione! Unde dignissimos praesentium, eligendi, velit quidem minus exercitationem dolor facere, id fuga illum possimus dolorem blanditiis modi.</p>
                     <button
                         className='header__btn'
                         type='submit'
@@ -26,22 +26,21 @@ export const Header = () => {
                                 <h1 className='header__name'>carlos daniel cruz perez</h1>
                                 <h2 className='header__dev'>Web Developer Desing</h2>
                                 <div className="header__icons">
-                                    <a className='header__icono'>
+                                    <a href='#' className='header__icono'>
                                         <IoLogoFacebook className='header__icon' />
                                     </a>
 
-                                    <a className='header__icono'>
+                                    <a href='#' className='header__icono'>
                                         <IoLogoLinkedin className='header__icon' />
                                     </a>
 
-                                    <a className='header__icono'>
+                                    <a href='#' className='header__icono'>
                                         <IoLogoTwitter className='header__icon' />
                                     </a>
-
-                                    <a className='header__icono'>
+ 
+                                    <a  href='#' className='header__icono'>
                                         <IoLogoInstagram className='header__icon' />
                                     </a>
-
                                 </div>
                             </div>
                         </div>

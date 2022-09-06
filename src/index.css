@@ -13,7 +13,6 @@
 body {
   width: 100%;
   background-color: black;
-  overflow-x: hidden;
 }
 
 .conteiner {
@@ -22,17 +21,14 @@ body {
 }
 
 .pagina {
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
   background: linear-gradient(90deg, rgba(23, 89, 145, 1) 0%, rgba(1, 1, 153, 1) 100%, rgba(14, 17, 161, 1) 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: max-content;
+  height: 80vh;
 }
 
 .pagina__burbuja {
@@ -74,6 +70,8 @@ body {
   animation: alternate move 1s ease infinite;
   z-index: 9999;
   margin-top: 5px;
+  margin-bottom: 10px;
+
 }
 
 .nav__img {
@@ -118,7 +116,9 @@ body {
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
-  margin-bottom: 120px;
+  height: 80vh;
+  position: relative;
+  z-index: 1;
 }
 
 .header__info {
@@ -198,6 +198,7 @@ body {
   object-fit: cover;
   position: absolute;
   transition: .5s;
+  display: none;
 }
 
 .header__data {
@@ -228,8 +229,14 @@ body {
   justify-content: space-between;
 }
 
+.header__icono{
+  width: 40px;
+  height: 40px;
+}
+
 .header__icon {
-  font-size: 40px;
+  width: 100%;
+  height: 100%;
   border: 1px solid white;
   border-radius: 50%;
   color: white;
@@ -273,13 +280,6 @@ body {
 }
 
 
-@media (min-width: 850px) {
-  .header {
-    margin: 0;
-    height: 100vh;
-  }
-}
-
 /* Skills */
 
 .skills {
@@ -289,7 +289,6 @@ body {
   border-radius: 20px;
   text-align: center;
   margin-top: -100px;
-  z-index: 5;
   box-shadow: 0px 0px 2px -1px white;
 }
 
@@ -441,6 +440,10 @@ body {
     flex-direction: column-reverse;
   }
 
+  .pagina{
+    height: 100vh;
+  }
+
   .header__btn {
     padding: 0;
   }
@@ -450,10 +453,15 @@ body {
 @media (max-width: 750px) {
   .skills {
     padding: 20px 20px;
+    margin: 0;
   }
 
   .projects__img {
     width: 100%;
+  }
+
+  .nav{
+    margin-bottom: 20px
   }
   .nav__hamburger{
     display: block;
