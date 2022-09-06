@@ -13,6 +13,7 @@
 body {
   width: 100%;
   background-color: black;
+  overflow-x: hidden;
 }
 
 .conteiner {
@@ -27,15 +28,14 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  background: linear-gradient(90deg, rgba(23,89,145,1) 0%, rgba(1,1,153,1) 100%, rgba(14,17,161,1) 100%);
-
+  background: linear-gradient(90deg, rgba(23, 89, 145, 1) 0%, rgba(1, 1, 153, 1) 100%, rgba(14, 17, 161, 1) 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: max-content;
 }
 
-.pagina__burbuja{
+.pagina__burbuja {
   background-color: rgba(255, 255, 255, .5);
   filter: blur(1px);
   position: absolute;
@@ -44,20 +44,22 @@ body {
   animation: borbuja 3s linear infinite;
 }
 
-.borbuja{
-  width: 100%;
+.borbuja {
+  width: auto;
   height: 100%;
 }
 
 @keyframes borbuja {
-  0%{
+  0% {
     opacity: 0;
     bottom: 0;
   }
-  50%{
+
+  50% {
     opacity: .4;
   }
-  100%{
+
+  100% {
     bottom: 100vh;
     opacity: 0;
   }
@@ -96,6 +98,12 @@ body {
   font-family: var(--fuent-secundary);
   font-weight: bold;
   text-decoration: none;
+}
+
+.nav__hamburger {
+  color: white;
+  font-size: 30px;
+  display: none;
 }
 
 @keyframes move {
@@ -152,19 +160,19 @@ body {
   width: 300px;
   height: 400px;
   position: relative;
-  
+
 }
 
 .header__card {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background: linear-gradient(0deg, rgba(34,189,195,0.8295693277310925) 0%, rgba(153,45,253,0.8435749299719888) 100%);
+  background: linear-gradient(0deg, rgba(34, 189, 195, 0.8295693277310925) 0%, rgba(153, 45, 253, 0.8435749299719888) 100%);
   overflow: hidden;
   position: relative;
 }
 
-.header__imgBx{
+.header__imgBx {
   top: 0;
   left: 0;
   width: 100%;
@@ -173,7 +181,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
 }
-.header__card:hover .header__imgBx img{
+
+.header__card:hover .header__imgBx img {
   transform-origin: top;
   margin-top: 10px;
   transform: scale(.5);
@@ -181,7 +190,7 @@ body {
   border-radius: 15px;
 }
 
-.header__imgBx img{
+.header__imgBx img {
   top: 0;
   left: 0;
   width: 100%;
@@ -191,7 +200,7 @@ body {
   transition: .5s;
 }
 
-.header__data{
+.header__data {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -202,24 +211,24 @@ body {
   margin: 0 auto 50px auto;
 }
 
-.header__name{
+.header__name {
   color: white;
   font-size: 1.4rem;
 }
 
-.header__dev{
+.header__dev {
   color: #d6d6d6;
   font-size: .9rem;
   font-family: var(--fuent-secundary);
 }
 
-.header__icons{
+.header__icons {
   width: 80%;
   display: flex;
   justify-content: space-between;
 }
 
-.header__icon{
+.header__icon {
   font-size: 40px;
   border: 1px solid white;
   border-radius: 50%;
@@ -228,19 +237,20 @@ body {
 
 }
 
-.header__icono:hover .header__icon{
+.header__icono:hover .header__icon {
   animation: rotate 1s ease;
   background-color: #2193f3;
 }
 
 @keyframes rotate {
-  from{
-  transform: rotate(0deg);
-  transform: scale(0);
+  from {
+    transform: rotate(0deg);
+    transform: scale(0);
   }
-  to{
-  transform: rotate(360deg);
-  transform: scale(1);
+
+  to {
+    transform: rotate(360deg);
+    transform: scale(1);
   }
 }
 
@@ -257,18 +267,19 @@ body {
   padding: 1rem;
 }
 
-.header__btn:hover{
+.header__btn:hover {
   transform: scale(1.2);
   transition: .5s;
 }
 
 
 @media (min-width: 850px) {
-  .header{
+  .header {
     margin: 0;
     height: 100vh;
   }
 }
+
 /* Skills */
 
 .skills {
@@ -316,7 +327,7 @@ body {
 
 .skills__fondo {
   position: relative;
-  background: linear-gradient(0deg, rgba(34,189,195,0.8295693277310925) 0%, rgba(153,45,253,0.8435749299719888) 100%);
+  background: linear-gradient(0deg, rgba(34, 189, 195, 0.8295693277310925) 0%, rgba(153, 45, 253, 0.8435749299719888) 100%);
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -403,7 +414,7 @@ body {
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly ;
+  justify-content: space-evenly;
 }
 
 .projects__name {
@@ -418,30 +429,37 @@ body {
 }
 
 @media (max-width: 850px) {
-  .projects__img{
+  .projects__img {
     width: 40%;
   }
 
-  .projects__contentImg{
+  .projects__contentImg {
     justify-content: space-evenly;
   }
 
-  .header{
+  .header {
     flex-direction: column-reverse;
   }
 
-  .header__btn{
+  .header__btn {
     padding: 0;
   }
-  
+
 }
 
 @media (max-width: 750px) {
-    .skills{
-      padding: 20px 20px;
-    }
+  .skills {
+    padding: 20px 20px;
+  }
 
-    .projects__img{
-      width: 100%;
-    }
+  .projects__img {
+    width: 100%;
+  }
+  .nav__hamburger{
+    display: block;
+  }
+
+  .nav__list{
+    display: none;
+  }
 }
