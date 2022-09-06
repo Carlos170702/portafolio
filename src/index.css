@@ -365,6 +365,7 @@ body {
   font-family: var(--fuent-secundary);
   margin-bottom: 1rem;
   font-size: 2rem;
+  break-before: d;
 }
 
 .proyects__info {
