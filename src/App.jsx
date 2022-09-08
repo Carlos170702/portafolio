@@ -9,21 +9,8 @@ function App() {
   const { links, proyects, skills, size, left, tamaño, animationDelay } = hookAppData();
   return (
     <div className="App">
-      <div className="pagina" id="home">
-        <NavBar links={links} />
-        <Header />
-        {
-          tamaño.map(item => (
-            <div
-              key={item}
-              className="pagina__burbuja"
-              style={{ width: `${size()}px`, height: `${size()}px`, left: `${left()}px`, animationDelay: `${animationDelay()}s` }}
-            >
-              <p className='borbuja'></p>
-            </div>
-          ))
-        }
-      </div>
+      <NavBar links={links} />
+      <Header />
       <Skills skills={skills} />
       <Projects proyects={proyects} />
     </div>

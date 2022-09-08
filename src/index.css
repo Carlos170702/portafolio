@@ -12,7 +12,8 @@
 
 body {
   width: 100%;
-  background-color: black;
+  background: linear-gradient(0deg, rgb(0,0,0) 0%, rgb(0,0,0) 25%, rgb(0,0,0) 49%, rgb(0, 2, 117) 100%);
+
 }
 
 .conteiner {
@@ -29,6 +30,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 80vh;
+  text-align: justify;
 }
 
 .pagina__burbuja {
@@ -117,8 +119,6 @@ body {
   justify-content: space-evenly;
   gap: 20px;
   height: 80vh;
-  position: relative;
-  z-index: 1;
 }
 
 .header__info {
@@ -158,9 +158,7 @@ body {
 
 .herader__pefil {
   width: 300px;
-  height: 400px;
-  position: relative;
-
+  height: 400px !important;
 }
 
 .header__card {
@@ -198,7 +196,6 @@ body {
   object-fit: cover;
   position: absolute;
   transition: .5s;
-  display: none;
 }
 
 .header__data {
@@ -271,7 +268,7 @@ body {
   align-items: center;
   font-size: 14px;
   font-family: var(--fuent-secundary);
-  padding: 1rem;
+  cursor: pointer;
 }
 
 .header__btn:hover {
@@ -284,12 +281,11 @@ body {
 
 .skills {
   background-color: black;
-  padding: 10px 80px;
   color: white;
   border-radius: 20px;
   text-align: center;
-  margin-top: -100px;
   box-shadow: 0px 0px 2px -1px white;
+  padding: 10px 10px;
 }
 
 .skills__titulo {
@@ -299,10 +295,10 @@ body {
 }
 
 .skills__info {
-  letter-spacing: 1px;
   color: #888888;
   font-size: 15px;
   font-family: 'Anek Telugu', sans-serif;
+  text-align: justify ;
 }
 
 .skills__contentSkills {
@@ -357,7 +353,9 @@ body {
 /* Projects */
 .Projects {
   text-align: center;
-  margin: 80px auto 0 auto;
+  /* margin: 80px auto 0 auto; */
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .proyects__titulo {
@@ -372,8 +370,8 @@ body {
   color: #888888;
   font-family: var(--fuent-three);
   word-spacing: 2px;
-  letter-spacing: 2px;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .proyects__tabs {
@@ -411,14 +409,11 @@ body {
 
 .projects__img {
   width: 30%;
-  height: 300px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-.projects__name {
-  color: white;
+  object-fit: cover ;
 }
 
 .projects__imgas {
@@ -439,6 +434,7 @@ body {
 
   .header {
     flex-direction: column-reverse;
+    margin-bottom: 20px;
   }
 
   .pagina{
@@ -452,13 +448,10 @@ body {
 }
 
 @media (max-width: 750px) {
-  .skills {
-    padding: 20px 20px;
-    margin: 0;
-  }
 
   .projects__img {
-    width: 100%;
+    width: 80%;
+    height: 400px;
   }
 
   .nav{
@@ -470,5 +463,15 @@ body {
 
   .nav__list{
     display: none;
+  }
+
+  .header{
+    height: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .header{
+    height: 100%;
   }
 }

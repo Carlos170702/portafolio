@@ -20,7 +20,6 @@ export const Projects = ({ proyects }) => {
                     {
                         proyects.map(item => (
                             <div key={item.id} className="projects__img">
-                                <h3 className="projects__name">{item.name}</h3>
                                 <img className="projects__imgas" src={item.url} alt={item.name} />
                             </div>
                         ))
