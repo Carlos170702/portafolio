@@ -1,6 +1,11 @@
-import { FiAlignJustify } from 'react-icons/fi'
+import { useState } from 'react'
+import { FiAlignJustify, FiX } from 'react-icons/fi'
+import { NavList } from './NavList'
 
 export const NavBar = ({ links }) => {
+
+    const [menu, setMenu] = useState(true)
+
     return (
         <>
             <nav className="conteiner nav">
@@ -11,14 +16,25 @@ export const NavBar = ({ links }) => {
                 <ul className="nav__list">
                     {
                         links.map(item => (
-                            <li key={item.id}>
-                                <a className="nav__link" href={item.url}>{item.name}</a>
-                            </li>
+                            <NavList key={item.id} item={item} />
                         ))
                     }
                 </ul>
-                <div className="nav__hamburger">
-                    <FiAlignJustify />
+                <div
+                    onClick={() => setMenu(!menu)}
+                    className="nav__hamburger"
+                >
+                    {
+                        menu
+                            ? <div className='nav__menu'>
+                                <FiAlignJustify className='nav__hamburger' />
+                            </div>
+                            : <>
+                                <div className='nav__menu'>
+                                    <FiX className='nav__exit' />
+                                </div>
+                            </>
+                    }
                 </div>
             </nav>
         </>

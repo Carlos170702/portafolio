@@ -12,7 +12,7 @@
 
 body {
   width: 100%;
-  background: linear-gradient(0deg, rgb(0,0,0) 0%, rgb(0,0,0) 25%, rgb(0,0,0) 49%, rgb(0, 2, 117) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 49%, rgb(0, 2, 117) 100%);
 
 }
 
@@ -70,9 +70,9 @@ body {
   justify-content: space-between;
   align-items: center;
   animation: alternate move 1s ease infinite;
-  z-index: 9999;
   margin-top: 5px;
   margin-bottom: 10px;
+  position: relative;
 
 }
 
@@ -83,6 +83,19 @@ body {
 
 .nav__logo {
   width: 100%;
+}
+
+.nav__menu {
+  position: absolute;
+  right: 2px;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav__exit {
+  color: rgb(250, 70, 70);
 }
 
 .nav__list {
@@ -157,8 +170,8 @@ body {
 }
 
 .herader__pefil {
-  width: 300px;
-  height: 400px !important;
+  width: min(99%, 300px);
+  height: 400px;
 }
 
 .header__card {
@@ -226,7 +239,7 @@ body {
   justify-content: space-between;
 }
 
-.header__icono{
+.header__icono {
   width: 40px;
   height: 40px;
 }
@@ -298,7 +311,7 @@ body {
   color: #888888;
   font-size: 15px;
   font-family: 'Anek Telugu', sans-serif;
-  text-align: justify ;
+  text-align: justify;
 }
 
 .skills__contentSkills {
@@ -413,7 +426,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  object-fit: cover ;
+  object-fit: cover;
 }
 
 .projects__imgas {
@@ -437,7 +450,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .pagina{
+  .pagina {
     height: 100vh;
   }
 
@@ -454,24 +467,44 @@ body {
     height: 400px;
   }
 
-  .nav{
+  .nav {
     margin-bottom: 20px
   }
-  .nav__hamburger{
+
+  .nav__hamburger {
     display: block;
   }
+/* navegacion */
+  .nav {
+    z-index: 9;
+  }
 
-  .nav__list{
+  .nav__list {
+    position: absolute;
+    bottom: -170px;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    padding: 10px;
     display: none;
   }
 
-  .header{
+  .header {
     height: 100%;
   }
 }
 
 @media (max-width: 500px) {
-  .header{
+  .header {
     height: 100%;
+  }
+
+  .nav__img {
+    width: 80px;
+  }
+
+  .nav__exit,
+  .nav__hamburger {
+    font-size: 25px;
   }
 }
